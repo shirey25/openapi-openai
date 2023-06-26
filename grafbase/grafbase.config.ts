@@ -4,7 +4,7 @@ const openai = connector.OpenAPI({
   schema:
     'https://raw.githubusercontent.com/openai/openai-openapi/master/openapi.yaml',
   headers: (headers) => {
-    headers.static('Authorization', `Bearer ${g.env('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')}`)
+    headers.static('Authorization', `Bearer ${g.env('api_key')}`)
   },
   transforms: { queryNaming: 'OPERATION_ID' }
 })
